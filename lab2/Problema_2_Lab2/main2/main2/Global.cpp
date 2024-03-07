@@ -7,8 +7,8 @@ int CompareEGrade(students* a, students* b)
 	f1 = a->GetEnglishGrade();
 	f2 = b->GetEnglishGrade();
 
-	if (f1 > f2) return -1;
-	else if (f1 < f2) return 1;
+	if (f1 > f2) return 1;
+	else if (f1 < f2) return -1;
 	return 0;
 
 }
@@ -18,8 +18,8 @@ int CompareMGrade(students* a, students* b)
 	f1 = a->GetMathGrade();
 	f2 = b->GetMathGrade();
 
-	if (f1 > f2) return -1;
-	else if (f1 < f2) return 1;
+	if (f1 > f2) return 1;
+	else if (f1 < f2) return -1;
 	return 0;
 }
 int CompareHGrade(students* a, students* b)
@@ -28,8 +28,8 @@ int CompareHGrade(students* a, students* b)
 	f1 = a->GetHistoryGrade();
 	f2 = b->GetHistoryGrade();
 
-	if (f1 > f2) return -1;
-	else if (f1 < f2) return 1;
+	if (f1 > f2) return 1;
+	else if (f1 < f2) return -1;
 	return 0;
 }
 int CompareAverageGrade(students* a, students* b)
@@ -38,8 +38,8 @@ int CompareAverageGrade(students* a, students* b)
 	f1 = a->GetAverageGrade();
 	f2 = b->GetAverageGrade();
 
-	if (f1 > f2) return -1;
-	else if (f1 < f2) return 1;
+	if (f1 > f2) return 1;
+	else if (f1 < f2) return -1;
 	return 0;
 }
 int CompareName(students* a, students* b)
@@ -55,10 +55,10 @@ int CompareName(students* a, students* b)
 	int val1 = strcmp(nume1, nume2);
 	int val2 = strcmp(prenume1, prenume2);
 
-	if (val1 == -1) return -1;
-	else if (val1 == 1) return 1;
-	else if (val1 == 0 && val2 == -1) return -1;
-	else if (val1 == 0 && val2 == 1) return 1;
+	if (val1 == -1) return 1;
+	else if (val1 == 1) return -1;
+	else if (val1 == 0 && val2 == -1) return 1;
+	else if (val1 == 0 && val2 == 1) return -1;
 	return 0;
 
 
