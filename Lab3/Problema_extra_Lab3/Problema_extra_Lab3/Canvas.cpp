@@ -36,7 +36,7 @@ void Canvas::set_pixels(int count, ...)
         x = va_arg(param, int);
         y = va_arg(param, int);
         val = va_arg(param, char);
-        DrawingTable[y][x] = val;
+        DrawingTable[x][y] = val;
     }
     va_end(param);
 }
