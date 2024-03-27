@@ -17,13 +17,13 @@ public:
     Sort(int c, ...);
     Sort(const char*);
     Sort();
-    Sort(const std::initializer_list<int>&);
+    ///Sort(const std::initializer_list<int>&);
     void InsertSort(bool ascendent);
     void QuickSort(bool ascendent);
     void BubbleSort(bool ascendente);
     void Print();
     int  GetElementsCount();
     int  GetElementFromIndex(int index);
-    Sort& operator=(const std::initializer_list<int>&);
+    Sort& operator=(std::initializer_list<int>&);
 };
 

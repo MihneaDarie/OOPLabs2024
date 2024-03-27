@@ -36,12 +36,20 @@ Sort::Sort(int* a, int n)
         vec[i] = a[i];
 }
 
-
-Sort::Sort() : vec(new int [6] {50, 25, 21, 76, 26, 86})
+Sort::Sort()
 {
-    count = 6;
+    printf("ana are mere");
 }
 
+/*
+Sort::Sort(const std::initializer_list<int>& list)
+{
+    delete[] vec;
+    count = list.size();
+    vec = new int[count + 1];
+    std::copy(list.begin(), list.end(), vec);
+}
+*/
 Sort::Sort(int c, ...)
 {
     count = c;
@@ -168,4 +176,14 @@ void Sort::Print()
     for (int i = 0; i < count; i++)
         printf("%d ", vec[i]);
     printf("\n");
+}
+
+Sort& Sort::operator=(std::initializer_list<int> list)
+{
+    delete[] vec;
+    count = list.size();
+    vec = new int[count + 1];
+    std::copy(list.begin(), list.end(), vec);
+
+    return (*this);
 }
